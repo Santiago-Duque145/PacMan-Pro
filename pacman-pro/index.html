@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Pro Arcade</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header id="hud" class="hidden">
+            <div class="hud-item">PUNTOS: <span id="score">0</span></div>
+            <div class="hud-item">NIVEL: <span id="level">1</span>/10</div>
+            <div class="hud-item">VIDAS: <span id="lives">3</span></div>
+        </header>
+
+        <canvas id="gameCanvas" width="420" height="420"></canvas>
+
+        <div id="ui-layer">
+            <div id="main-menu" class="screen">
+                <h1>PAC-MAN ARCADE</h1>
+                <p class="subtitle">Inserta créditos para ganar premios</p>
+                <div class="stats-box">
+                    <p>Créditos: <span id="menu-credits">0</span></p>
+                    <p>Mejor Puntaje: <span id="menu-highscore">0</span></p>
+                </div>
+                
+                <!-- INPUT PARA EL NOMBRE AMPLIADO A 15 CARACTERES -->
+                <input type="text" id="player-name" placeholder="TU NOMBRE" maxlength="15" 
+                    style="margin-bottom:15px; padding:10px; font-size:1.2em; font-family:var(--font); text-align:center; background:#000; color:var(--primary); border:2px solid var(--primary); text-transform:uppercase; width: 70%;">
+                
+                <button id="btn-insert-coin" class="btn secondary">INSERTAR MONEDA</button>
+                <button id="btn-play" class="btn primary disabled" disabled>JUGAR AHORA</button>
+                <button id="btn-ranking" class="btn outline">VER RANKING</button>
+            </div>
+
+            <div id="pause-screen" class="screen hidden"><h2>PAUSA</h2></div>
+            <div id="level-screen" class="screen hidden">
+                <h2 id="level-title">NIVEL COMPLETADO</h2>
+                <p>Preparando siguiente nivel...</p>
+            </div>
+            <div id="game-over-screen" class="screen hidden">
+                <h2>GAME OVER</h2>
+                <p>Puntaje Final: <span id="final-score">0</span></p>
+                <button id="btn-restart" class="btn primary">VOLVER AL MENÚ</button>
+            </div>
+            <div id="ranking-screen" class="screen hidden">
+                <h2>TOP JUGADORES</h2>
+                <ol id="ranking-list"></ol>
+                <button id="btn-close-ranking" class="btn outline">CERRAR</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/lib/alea-pacMen.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
