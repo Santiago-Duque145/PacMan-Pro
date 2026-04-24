@@ -2,6 +2,7 @@ Juego de arcade (pacman) implementando particularidades, de difucultad.
  - Fantasma que se teletransporta
  - Invasión enemigos de otros juegos (DK y Goomba)
  - Aceleración progresiva movimiento de fantas
+
 Implementación de librería pseudoaleatoria (cuadrado medio) hecha por este servidor,
 que es la que hace el movimiento aleatorio de los fantasmas y otras funciones en el
 juego.
